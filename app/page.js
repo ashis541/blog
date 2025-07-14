@@ -61,27 +61,6 @@ export default async function Home() {
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Header */}
-        <header className="bg-white shadow-sm border-b border-slate-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <nav className="flex justify-between items-center">
-              <Link href="/" className="text-2xl font-bold text-slate-900 hover:text-blue-600 transition-colors">
-                Tech Insights
-              </Link>
-              <div className="flex space-x-8">
-                <Link href="/about" className="text-slate-600 hover:text-slate-900 transition-colors">
-                  About
-                </Link>
-                <Link href="/contact" className="text-slate-600 hover:text-slate-900 transition-colors">
-                  Contact
-                </Link>
-                <Link href="/rss.xml" className="text-slate-600 hover:text-slate-900 transition-colors">
-                  RSS
-                </Link>
-              </div>
-            </nav>
-          </div>
-        </header>
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
