@@ -23,14 +23,6 @@ export default function NotFound() {
         >
           Go Back Home
         </Link>
-        <div>
-          <Link 
-            href="/rss.xml"
-            className="text-blue-600 hover:text-blue-800"
-          >
-            Subscribe to our RSS feed
-          </Link>
-        </div>
       </div>
     </div>
   )

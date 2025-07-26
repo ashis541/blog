@@ -1,9 +1,9 @@
-import { Feed } from 'feed'
+import { Feed } from 'feed';
 
 export async function generateRSSFeed(posts) {
-  const siteURL = 'https://yourdomain.com'
-  const date = new Date()
-  
+  const siteURL = 'https://yourdomain.com'; // ✅ Replace with your actual domain
+  const date = new Date();
+
   const feed = new Feed({
     title: 'My SEO Blog',
     description: 'A modern, SEO-optimized blog built with Next.js',
@@ -25,11 +25,16 @@ export async function generateRSSFeed(posts) {
       email: 'your-email@example.com',
       link: siteURL,
     },
-  })
-  
+  });
+
   posts.forEach((post) => {
-    const url = `${siteURL}/posts/${post.slug}`
-    
+    const url = `${siteURL}/posts/${post.slug}`;
+
+    // Ensure image is a fully qualified URL
+    const imageUrl = post.image?.startsWith('http')
+      ? post.image
+      : `${siteURL}${post.image}`;
+
     feed.addItem({
       title: post.title,
       id: url,
@@ -44,12 +49,18 @@ export async function generateRSSFeed(posts) {
         },
       ],
       date: new Date(post.date),
-      image: post.image || `${siteURL}/og-image.jpg`,
-      category: post.tags.map((tag) => ({
+      image: imageUrl,
+      enclosure: post.image
+        ? {
+            url: imageUrl,
+            type: 'image/jpeg', // adjust if your image is PNG/WebP etc.
+          }
+        : undefined,
+      category: post.tags?.map((tag) => ({
         name: tag,
-      })),
-    })
-  })
-  
-  return feed.rss2()
+      })) || [],
+    });
+  });
+
+  return feed.rss2(); // you can also return feed.atom1() or feed.json1()
 }

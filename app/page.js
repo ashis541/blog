@@ -74,20 +74,6 @@ export default async function Home() {
                 Discover expert insights on web development, React, Next.js, and cutting-edge technology trends. 
                 Level up your skills with our comprehensive guides and tutorials.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link 
-                  href="#latest-posts"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                >
-                  Explore Articles
-                </Link>
-                <Link 
-                  href="/rss.xml"
-                  className="border-2 border-slate-300 text-slate-700 px-8 py-3 rounded-lg font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all duration-200"
-                >
-                  Subscribe RSS
-                </Link>
-              </div>
             </div>
           </section>
 
@@ -181,75 +167,7 @@ export default async function Home() {
             )}
           </section>
 
-          {/* Newsletter CTA */}
-          <section className="py-16">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-center text-white">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Never Miss an Update
-              </h2>
-              <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                Subscribe to our RSS feed and get the latest insights delivered straight to your feed reader.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link 
-                  href="/rss.xml"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                >
-                  Subscribe to RSS Feed
-                </Link>
-                <Link 
-                  href="/about"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
-                >
-                  Learn More About Us
-                </Link>
-              </div>
-            </div>
-          </section>
         </main>
-
-        {/* Footer */}
-        <footer className="bg-slate-900 text-white py-12 mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="md:col-span-2">
-                <h3 className="text-2xl font-bold mb-4">Tech Insights</h3>
-                <p className="text-slate-400 mb-4 max-w-md">
-                  Your go-to source for web development tutorials, technology trends, and expert insights.
-                </p>
-                <div className="flex space-x-4">
-                  <Link href="/rss.xml" className="text-slate-400 hover:text-white transition-colors">
-                    RSS
-                  </Link>
-                  <Link href="/sitemap.xml" className="text-slate-400 hover:text-white transition-colors">
-                    Sitemap
-                  </Link>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Navigation</h4>
-                <ul className="space-y-2">
-                  <li><Link href="/" className="text-slate-400 hover:text-white transition-colors">Home</Link></li>
-                  <li><Link href="/posts" className="text-slate-400 hover:text-white transition-colors">All Posts</Link></li>
-                  <li><Link href="/about" className="text-slate-400 hover:text-white transition-colors">About</Link></li>
-                  <li><Link href="/contact" className="text-slate-400 hover:text-white transition-colors">Contact</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Topics</h4>
-                <ul className="space-y-2">
-                  <li><Link href="/tags/react" className="text-slate-400 hover:text-white transition-colors">React</Link></li>
-                  <li><Link href="/tags/nextjs" className="text-slate-400 hover:text-white transition-colors">Next.js</Link></li>
-                  <li><Link href="/tags/javascript" className="text-slate-400 hover:text-white transition-colors">JavaScript</Link></li>
-                  <li><Link href="/tags/web-development" className="text-slate-400 hover:text-white transition-colors">Web Development</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-              <p>&copy; {new Date().getFullYear()} Tech Insights. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   )

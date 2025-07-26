@@ -190,22 +190,6 @@ export default async function PostPage({ params }) {
           </div>
 
           {/* Navigation */}
-          <nav className="mt-16 flex flex-col sm:flex-row justify-between items-center gap-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
-            <Link 
-              href="/"
-              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-xl hover:from-gray-700 hover:to-gray-800 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-            <Link 
-              href="/rss.xml"
-              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
-            >
-              <Rss className="w-4 h-4" />
-              Subscribe to RSS
-            </Link>
-          </nav>
         </div>
       </div>
     </>

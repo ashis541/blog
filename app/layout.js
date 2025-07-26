@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -75,11 +76,7 @@ export default function RootLayout({ children }) {
         <main className="min-h-screen bg-gray-50">
           {children}
         </main>
-        <footer className="bg-white border-t border-gray-200 py-8">
-          <div className="max-w-4xl mx-auto px-4 text-center text-gray-600">
-            <p>&copy; 2024 My SEO Blog. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   )

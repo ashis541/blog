@@ -31,12 +31,6 @@ export default function Header() {
             >
               Contact
             </Link>
-            <Link 
-              href="/rss.xml"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm"
-            >
-              RSS
-            </Link>
           </div>
         </nav>
       </div>
